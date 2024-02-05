@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <img id="logo" src="./logo.png">
+        <span style="font-size: 1.5rem;">Track Me</span>
+    </div>
+    <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="login.html">Try for Free</a></li>
+        <li><a href="login.html" id="indexSignInBtn">Sign In</a></li>
+    </ul>
+</nav>
+
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+          <button type ="button"class ="toggle-btn" onclick="login()">Sign in</button>
+          <button type ="button"class ="toggle-btn" id="myButton" onclick="register()">Sign up</button>
+        
+       </div>
+        
+        
+        <form action="backend.html" id="login" class ="input-group">
+          <input type="text" class="input-field" name="name" placeholder="Username" required>
+          <input type="text" class="input-field" placeholder="Enter Password" required>
+          <input type="checkbox" class ="check-box">
+          <span class="span">Remember Password</span>
+          <button type="submit" class="submit-btn">Log In</button>
+        </form>
+        <form action="backend.html" id="register" class ="input-group">
+          <input type="text" class="input-field" id="username" name="name" placeholder="Name" required>
+          <input type="email" class ="input-field" placeholder="Email">
+          <input type="text" class="input-field" placeholder="Enter Password">
+          <input type="checkbox" class="check-box">
+          <span class="span">I agree to the <a href="#">Terms & Services</a></span>
+          <button type="submit" class ="submit-btn" onclick="">Log In</button>
+        </form>
+        <div class="social-icons">
+            <i class="bx bxl-google"></i>
+            <i class="bx bxl-instagram"></i>
+            <i class="bx bxl-facebook-circle"></i>
+          </div>
+    </div>
+  </div>
+  <script>
+ window.onload = function() {
+      // Get the button element by its ID
+      var button = document.getElementById('myButton');
+
+      // Trigger a click on the button
+      button.click();
+    };
+
+    var log = document.getElementById("login")
+    var reg = document.getElementById("register")
+    var button = document.getElementById("btn")
+
+    function register(){
+      log.style.left = "-400px";
+      reg.style.left = "50px"
+      button.style.left = "110px"
+    }
+
+    function login(){
+      log.style.left = "50px";
+      reg.style.left = "450px";
+      button.style.left = "0";
+    }
+  </script>
+</body>
+</html>
